@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.se.pojo.Exp" table="exp">
+		<!-- 主键ID配置 -->
+		<id name="exp_id" type="java.lang.Integer">
+			<column name="exp_id"></column>
+			<generator class="sequence" />
+		</id>
+	</class>
+</hibernate-mapping>

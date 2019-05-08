@@ -31,7 +31,6 @@
 			<result name="success">/student/listStudent.jsp</result>
 			<result name="fail">/student/addStudent.jsp</result>
 		</action>
-		deleteStudent
 		<action name="*Student" class="com.se.action.StudentAction"
 			method="{1}">
 			<result name="success">/student/listStudent.jsp</result>
