@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="user" extends="struts-default">
+		<interceptors>
+			<interceptor name="loginInterceptor"
+				class="com.se.interceptor.LoginInterceptor" />
+		</interceptors>
+		<action name="login" class="com.se.action.LoginAction">
+			<interceptor-ref name="loginInterceptor" />
+			<interceptor-ref name="defaultStack" />
+			<!-- <result name="input" type="redirectAction">/student/listStudent</result> -->
+			<result name="StudentLoginSuccess" type="redirectAction">student/listStudent
+			</result>
+			<result name="fail">/login.jsp</result>
+		</action>
+	</package>
+	<package name="student" extends="struts-default">
+		<interceptors>
+			<interceptor name="updateStudentInterceptor"
+				class="com.se.interceptor.UpdateStudentInterceptor" />
+		</interceptors>
+		<action name="addStudent" class="com.se.action.StudentAction"
+			method="add">
+			<interceptor-ref name="updateStudentInterceptor" />
+			<interceptor-ref name="defaultStack" />
+			<result name="success">/student/listStudent.jsp</result>
+			<result name="fail">/student/addStudent.jsp</result>
+		</action>
+		deleteStudent
+		<action name="*Student" class="com.se.action.StudentAction"
+			method="{1}">
+			<result name="success">/student/listStudent.jsp</result>
+		</action>
+	</package>
+	<package name="file" extends="struts-default">
+		<action name="downloadFile"
+			class="com.se.action.DownloadAction">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attatchment;filename=${filename}</param>
+			</result>
+		</action>
+		<action name="uploadFile" class="com.se.action.UploadAction">
+			<result name="success" type="redirectAction">/student/listStudent</result>
+		</action>
+	</package>
+</struts>
