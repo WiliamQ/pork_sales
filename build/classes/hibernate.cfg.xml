@@ -15,7 +15,9 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="current_session_context_class">thread</property>
 		<property name="show_sql">true</property>
-		<mapping resource="com/se/pojo/student.hbm.xml" />
+		<mapping resource="com/se/pojo/Student.hbm.xml" />
+		<mapping resource="com/se/pojo/Exp.hbm.xml" />
+		<mapping resource="com/se/pojo/Teacher.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>

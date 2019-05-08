@@ -1,44 +1,44 @@
 package com.se.pojo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Exp {
-	private int exp_id;
-	private String exp_address;
-	private int teacher_id;
-	private Date release_time;
+	private int id;
+	private String address;
+	private int teacherId;
+	private Date releaseTime;
 	private Date deadline;
 
-	public int getExp_id() {
-		return exp_id;
+	public int getId() {
+		return id;
 	}
 
-	public void setExp_id(int exp_id) {
-		this.exp_id = exp_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getExp_address() {
-		return exp_address;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setExp_address(String exp_address) {
-		this.exp_address = exp_address;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public int getTeacher_id() {
-		return teacher_id;
+	public int getTeacherId() {
+		return teacherId;
 	}
 
-	public void setTeacher_id(int teacher_id) {
-		this.teacher_id = teacher_id;
+	public void setTeacherId(int teacherId) {
+		this.teacherId = teacherId;
 	}
 
-	public Date getRelease_time() {
-		return release_time;
+	public Date getReleaseTime() {
+		return releaseTime;
 	}
 
-	public void setRelease_time(Date release_time) {
-		this.release_time = release_time;
+	public void setReleaseTime(Date releaseTime) {
+		this.releaseTime = releaseTime;
 	}
 
 	public Date getDeadline() {
@@ -47,6 +47,12 @@ public class Exp {
 
 	public void setDeadline(Date deadline) {
 		this.deadline = deadline;
+	}
+
+	@Override
+	public String toString() {
+		return "Exp [id=" + id + ", address=" + address + ", teacherId=" + teacherId + ", releaseTime=" + releaseTime
+				+ ", deadline=" + deadline + "]";
 	}
 
 }

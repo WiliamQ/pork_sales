@@ -9,9 +9,9 @@
 <body>
 	<div>
 		<form action="user/login.action" method="post">
-			账&nbsp;&nbsp;号：<input name="id" type="text" /><label>${iderror}</label><br />
-			密&nbsp;&nbsp;码：<input name="password" type="password" /><label>${passworderror}</label><br />
-			<input type="submit" value="登陆" /><label>${loginerror}</label>
+			账&nbsp;&nbsp;号：<input name="id" type="text" /><span>${iderror}</span><br />
+			密&nbsp;&nbsp;码：<input name="password" type="password" /><span>${passworderror}</span><br />
+			<input type="submit" value="登陆" /><span>${loginerror}</span>
 		</form>
 	</div>
 </body>

@@ -5,9 +5,22 @@
 <hibernate-mapping>
 	<class name="com.se.pojo.Exp" table="exp">
 		<!-- 主键ID配置 -->
-		<id name="exp_id" type="java.lang.Integer">
+		<id name="id" type="java.lang.Integer">
 			<column name="exp_id"></column>
 			<generator class="sequence" />
 		</id>
+		<property name="address" type="java.lang.String">
+			<column name="exp_address" />
+		</property>
+		<property name="teacherId" type="java.lang.Integer">
+			<column name="teacher_id" />
+		</property>
+		<property name="releaseTime" type="java.util.Date">
+			<column name="release_time" />
+		</property>
+		<property name="deadline" type="java.util.Date">
+			<column name="deadline" />
+		</property>
+
 	</class>
 </hibernate-mapping>
