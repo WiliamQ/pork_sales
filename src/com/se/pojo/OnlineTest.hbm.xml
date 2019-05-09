@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.se.pojo.OnlineTest" table="online_test">
+		<id name="id" type="java.lang.Integer">
+			<column name="ol_hw_id" />
+			<generator class="sequence" />
+		</id>
+		<property name="knowledgeType" type="java.lang.String">
+			<column name="kno_type" />
+		</property>
+		<property name="question" type="java.lang.String">
+			<column name="question" />
+		</property>
+		<property name="choiceA" type="java.lang.String">
+			<column name="choiceA" />
+		</property>
+		<property name="choiceB" type="java.lang.String">
+			<column name="choiceB" />
+		</property>
+		<property name="choiceC" type="java.lang.String">
+			<column name="choiceC" />
+		</property>
+		<property name="choiceD" type="java.lang.String">
+			<column name="choiceD" />
+		</property>
+		<property name="answer" type="java.lang.String">
+			<column name="answer" />
+		</property>
+		<property name="trueFreq" type="java.lang.Integer">
+			<column name="true_freq" />
+		</property>
+		<property name="ansFreq" type="java.lang.Integer">
+			<column name="ans_freq" />
+		</property>
+	</class>
+</hibernate-mapping>

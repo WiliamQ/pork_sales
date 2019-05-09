@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.se.pojo.HomeworkAnswer" table="hw_answer">
+		<id name="id" type="java.lang.Integer">
+			<column name="hw_ans_id" />
+			<generator class="sequence" />
+		</id>
+		<property name="studentId" type="java.lang.Integer">
+			<column name="stu_id" />
+		</property>
+		<property name="studentName" type="java.lang.String">
+			<column name="stu_name" />
+		</property>
+		<property name="submitTime" type="java.util.Date">
+			<column name="sub_time" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="address" />
+		</property>
+		<property name="score" type="java.lang.Integer">
+			<column name="score" />
+		</property>
+	</class>
+</hibernate-mapping>

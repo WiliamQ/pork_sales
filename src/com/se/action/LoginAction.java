@@ -28,7 +28,7 @@ public class LoginAction extends ActionSupport {
 			TeacherService ts = new TeacherService();
 			if (ts.login(id, password)) {
 				ActionContext.getContext().getSession().put("USER", id);
-				ActionContext.getContext().getSession().put("ROLE", "Student");
+				ActionContext.getContext().getSession().put("ROLE", "Teacher");
 				return "TeacherLoginSuccess";
 			}
 		}

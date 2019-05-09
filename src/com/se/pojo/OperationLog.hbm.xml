@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.se.pojo.OperationLog" table="op_detail">
+		<!-- 主键ID配置 -->
+		<id name="id" type="java.lang.Integer">
+			<column name="log_id" />
+			<generator class="sequence" />
+		</id>
+		<property name="studentId" type="java.lang.Integer">
+			<column name="stu_id" />
+		</property>
+		<property name="studentName" type="java.lang.String">
+			<column name="stu_name" />
+		</property>
+		<property name="operation" type="java.lang.String">
+			<column name="op_detail" />
+		</property>
+	</class>
+</hibernate-mapping>

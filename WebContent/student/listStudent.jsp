@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.se.pojo.*"%>
 <%@ page import="java.util.*"%>
-<jsp:include page="../include/navigator.jsp"></jsp:include>
 <%
 	List<Student> students = (List<Student>) request.getAttribute("studentlist");
 %>

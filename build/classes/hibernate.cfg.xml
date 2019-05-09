@@ -18,6 +18,11 @@
 		<mapping resource="com/se/pojo/Student.hbm.xml" />
 		<mapping resource="com/se/pojo/Exp.hbm.xml" />
 		<mapping resource="com/se/pojo/Teacher.hbm.xml" />
+		<mapping resource="com/se/pojo/Class.hbm.xml" />
+		<mapping resource="com/se/pojo/Homework.hbm.xml" />
+		<mapping resource="com/se/pojo/HomeworkAnswer.hbm.xml" />
+		<mapping resource="com/se/pojo/OnlineTest.hbm.xml" />
+		<mapping resource="com/se/pojo/OperationLog.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>
